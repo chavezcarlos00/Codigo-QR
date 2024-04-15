@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h1 style="text-aling: center;">Generacion de  QR</h1>
+    </header>
+    <div style="margin-top: 50xp;"></div>
+    <div>
+        <label for="input1">Nombre:</label>
+        <input type="text" id="input1" required maxlength="100" placeholder="ingresa tu Nombre">
+        <br><br>
+        <label for="input2">correo electronico</label>
+        <input type="email" id="input2" required maxlength="150">
+        <br><br>
+        <label for="input3">selecciona la institucion:</label>
+        <input type="text" id="input3" required list="institucionlista">
+        <datalist id="institucionlista">
+         <option value="IPN">IPN</option>
+         <option value="Tec Monterrey">Tecnologico de Monterrey</option>
+         <option value="UNAM">Universidad Nacional Autonoma De Mexico</option>
+         <option value="Fes Aragon">Facultad de Estudios Superiores Aragon</option>
+         <option value="Fes Zaragoza">Facultad De Estudios Superiores Zaragoza</option>
+        </datalist>
+        <label for="input4">Dependencia</label>
+        <input type="text" id="input4" required maxlength="100">
+        <button onclick="generarQR()" class="btn btn-primary">Generador QR</button>
+        <button onclick="location.href='qr.html'">Generar Nuevo QR</button>
+         
+         
+    </div>
+
+    <div id="qr-code">
+        <img src="" alt="">
+    </div>
+
+</body>
+<script src="qr.js"></script>
+</html>
